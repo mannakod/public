@@ -1,2 +1,3 @@
 ssh -D 1337 cloudsigma@ip
 ssh -L port:ip:port cloudsigma@ip
+kubectl port-forward deployment/nginx-deployment 8080:80
