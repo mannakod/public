@@ -1,0 +1,2 @@
+ssh -D 1337 cloudsigma@ip
+ssh -L port:ip:port cloudsigma@ip
