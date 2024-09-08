@@ -3,3 +3,4 @@ ssh -L port:ip:port cloudsigma@ip
 kubectl port-forward deployment/nginx-deployment 8080:80
 kubectl create deploy merahttpd --image httpd --replicas 3
 kubectl expose deploy merahttpd --type NodePort --port 80
+kubectl patch svc merahttpd -p '{"spec":{"ports":[{"port":80,"nodePort":30009}]}}'
