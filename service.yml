@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mynginx-service
+spec:
+  selector:
+    app: mynginx
+  ports:
+    - protocol: TCP
+      port: 80  # The port the service will expose
+      targetPort: 80  # The port in the container to which the traffic is forwarded
+  type: NodePort  # This exposes the service on each Node's IP at a static port
+  nodePort: 30007  # You can specify a NodePort (between 30000-32767) or let Kubernetes choose one
