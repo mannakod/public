@@ -5,4 +5,5 @@ sudo apt install docker.io -y
 sudo apt install snapd -y
 sudo snap install kubectl --classic
 usermod -aG docker cloudsigma
+minikube start --force
 #sudo newgrp docker
